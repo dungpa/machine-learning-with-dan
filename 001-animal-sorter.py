@@ -1,4 +1,5 @@
 from mlforkidsimages import MLforKidsImageProject
+from tkinter import Tk, messagebox
 
 # treat this key like a password and keep it secret!
 key = "c0e76be0-d9b3-11ef-83aa-75c08270f6280d1b2cc1-7ed4-436a-a0f0-ee317f08e381"
@@ -13,5 +14,9 @@ demo = myproject.prediction("alligator.jpg")
 label = demo["class_name"]
 confidence = demo["confidence"]
 
+root = Tk()
+root.withdraw()
+
 # CHANGE THIS to do something different with the result
-print ("result: '%s' with %d%% confidence" % (label, confidence))
+messagebox.showinfo("The results are:", "I think it is closest to the: '%s' with %d%% confidence" % (label, confidence))
+
