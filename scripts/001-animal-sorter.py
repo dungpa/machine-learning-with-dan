@@ -1,9 +1,9 @@
 from mlforkidsimages import MLforKidsImageProject
+from authorisation import api_key
 from tkinter import Tk, messagebox, Label
 from PIL import Image, ImageTk
 
-# treat this key like a password and keep it secret!
-key = "c0e76be0-d9b3-11ef-83aa-75c08270f6280d1b2cc1-7ed4-436a-a0f0-ee317f08e381"
+key = api_key
 
 root = Tk()
 image_path = "alligator.jpg"
