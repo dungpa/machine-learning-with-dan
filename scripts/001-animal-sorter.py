@@ -1,9 +1,9 @@
 from mlforkidsimages import MLforKidsImageProject
-from authorisation import api_key
+from authorisation import api_key_001
 from tkinter import Tk, messagebox, Label
 from PIL import Image, ImageTk
 
-key = api_key
+key = api_key_001
 
 root = Tk()
 image_path = "alligator.jpg"
