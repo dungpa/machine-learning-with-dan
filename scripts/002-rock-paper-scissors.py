@@ -46,3 +46,6 @@ elif aiwin == True and label == 'Scissors':
 if ailose == True:
     messagebox.showinfo("You win.", "You have beaten me.")
     
+if aidraw == True:
+    messagebox.showinfo("It's a draw", "You and I used the same gestures.")
+    
