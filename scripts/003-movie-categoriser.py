@@ -1,6 +1,7 @@
 from mlforkidsimages import MLforKidsImageProject
 from authorisation import api_key_003
-from tkinter import Tk, messagebox
+from tkinter import Tk, messagebox, Label
+from PIL import Image, ImageTk
 
 # treat this key like a password and keep it secret!
 key = api_key_003
@@ -20,7 +21,14 @@ label = demo["class_name"]
 confidence = demo["confidence"]
 
 root = Tk()
-root.withdraw()
+image_path = "dragonprince.jpg"
+image = Image.open(image_path)
+image = image.resize((500, 500), Image.Resampling.LANCZOS)  # Resize image to fit the window
+tk_image = ImageTk.PhotoImage(image)
+
+# Create a Label widget to display the image
+image_label = Label(root, image=tk_image)
+image_label.pack(pady=10)
 
 your_response = get_response()
 
